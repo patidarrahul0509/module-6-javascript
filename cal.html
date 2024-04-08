@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <section id="container-section">
+        <h3 class="main_heading">Maths Operations</h3>
+        <div class="first_number_row">
+            <label for="first Number">Enter 1st number :</label>
+            <input type="number" name="number1" id="number1">
+        </div>
+        <div class="second_number_row">
+            <label for="second Number">Enter 2nd number :</label>
+            <input type="number" name="number" id="number2">
+        </div>
+
+        <div class="aerithmetic_signs_of_opertors">
+
+            <div id="whole_list_cont">
+                <div class="three_list_cont">
+                    <button class="small_container" onclick="add ()">&#43;</button>
+                    <button class="small_container" onclick="sub ()">&#8722;</button>
+                    <button class="small_container" onclick="multi ()">&#42;</button>
+                </div>
+                <div class="two_list_cont">
+                    <button class="small_container" onclick="divide ()">&#8725;</button>
+                    <button class="small_container" onclick="reminde ()">&#37;</button>
+                </div>
+            </div>
+
+            <h2 id="result" style="color: black;">Answer is: </h2>
+
+        </div>
+    </section>
+
+    <script>
+        function add () {
+          const number1 = Number(document.getElementById("number1").value);
+          const number2 = Number(document.getElementById("number2").value);
+          const result = number1 + number2;
+          document.getElementById("result").textContent = `Answer is: ${result}
+          `;
+        }
+        function sub () {
+          const number1 = Number(document.getElementById("number1").value);
+          const number2 = Number(document.getElementById("number2").value);
+          const result = number1 - number2;
+          document.getElementById("result").textContent = `Answer is: ${result}
+          `;
+        }
+    </script>
+</body>
+</html>
